@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Argonaute{% endblock %}
+
+{% block body %}
+    <h1>Create new Argonaute</h1>
+
+    {{ include('argonaute/_form.html.twig') }}
+
+    <a href="{{ path('app_argonaute_index') }}">back to list</a>
+{% endblock %}
