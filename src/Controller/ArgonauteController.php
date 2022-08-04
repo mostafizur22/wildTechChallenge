@@ -10,14 +10,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/argonaute')]
+#[Route('/')]
 class ArgonauteController extends AbstractController
 {
     #[Route('/', name: 'app_argonaute_index', methods: ['GET'])]
     public function index(ArgonauteRepository $argonauteRepository): Response
     {
         return $this->render('argonaute/index.html.twig', [
-            'argonautes' => $argonauteRepository->findAll(),
+            'argonautes' => $argonauteRepository->findAll()
         ]);
     }
 
